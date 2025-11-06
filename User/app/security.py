@@ -57,8 +57,8 @@ def get_current_user(
 
 # NOVO: FUNÇÃO PARA EXTRAIR O ID DO CABEÇALHO DO GATEWAY
 def get_current_user_from_gateway(
-    session: Session = Depends(get_session),
     x_user_id: Annotated[int, Header(convert_underscores=True)],
+    session: Session = Depends(get_session),
 ):
     """
     Função de dependência para ser usada nas rotas protegidas do User-service.
