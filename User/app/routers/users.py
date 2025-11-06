@@ -18,7 +18,7 @@ router = APIRouter(prefix='/users', tags=['users'])
 @router.post(
     '/', status_code=HTTPStatus.CREATED, response_model=schemas.UserPublic
 )
-def create_user(user: schemas.UserPublic, session: T_Session):
+def create_user(user: schemas.UserSchema, session: T_Session):
     """Cria um novo usuário no sistema (rota de registro)."""
     # ... (Lógica de verificação de username e email) ...
     db_user_username = session.scalar(
