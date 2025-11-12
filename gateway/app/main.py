@@ -11,9 +11,9 @@ from pydantic import BaseModel, Field
 
 # --- CONFIGURAÇÃO DE MICROSSERVIÇOS (MOCK DE ENV) ---
 # Em produção, estas URLs seriam obtidas de um sistema de orquestração (Kubernetes, Docker-compose)
-USER_SERVICE_URL = "http://user-service:8000"
-PRODUCT_SERVICE_URL = "http://product-service:8001"
-SALES_SERVICE_URL = "http://sales-service:8002"
+USER_SERVICE_URL = "http://3.80.87.236/"
+PRODUCT_SERVICE_URL = "http://44.203.15.210"
+SALES_SERVICE_URL = "http://44.201.13.247/"
 
 # A SECRET_KEY DEVE SER A MESMA USADA NO USER-SERVICE para decodificação local
 # Em um cenário ideal, o gateway buscaria uma chave pública, mas para simplificação:
